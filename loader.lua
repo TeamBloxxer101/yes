@@ -179,19 +179,19 @@ local Name = game.Players.LocalPlayer.Name
 
 _G.breakServer = true
 _G.chatSpam = true
-_G.ChatInput = "string"
+_G.ChatInput = "i was born in north korea"
 
 
-function breakserver()
-    while _G.breakServer == true do
-      workspace.Main.General.Speak:FireServer(_G.ChatInput,"Judge","Order","",false)
+function chatspam()
+    while _G.chatSpam == true do
+         workspace.Main.General.Speak:FireServer(_G.ChatInput,"Judge","Order","",false)
         wait(.0001)
      end
     end
 
- function chatspam()
-   while _G.chatspam == true do
-    workspace.Main.General.Speak:FireServer("i was born in north korea","Judge","Order","",false)
+ function breakserver()
+   while _G.breakServer == true do
+      workspace.Main.General.Speak:FireServer("         ","Judge","Slam","",false)
          wait(0.5)
        end
       end
