@@ -192,7 +192,7 @@ function breakserver()
  function chatspam()
    while _G.chatspam == true do
     workspace.Main.General.Speak:FireServer("i was born in north korea","Judge","Order","",false)
-         wait(.0001)
+         wait(0.5)
        end
       end
 
