@@ -177,7 +177,6 @@ local player = game.Players.LocalPlayer
 local Name = game.Players.LocalPlayer.Name
 
 
-_G.breakServer = true
 _G.chatSpam = true
 _G.ChatInput = "i was born in north korea"
 
@@ -190,9 +189,9 @@ function chatspam()
     end
 
  function breakserver()
-   while _G.breakServer == true do
+   while true do
       workspace.Main.General.Speak:FireServer("         ","Judge","Slam","",false)
-         wait(0.5)
+         wait(.00000000000000000000000000000001)
        end
       end
 
@@ -231,20 +230,17 @@ local Window2 = Rayfield:CreateWindow({
  })
 
  local MainTab = Window2:CreateTab("Main", 4483362458) -- Title, Image
- local TeamTab = Window2:CreateTab("Team", 4483362458) -- Title, Image
+ local TeamTab = Window2:CreateTab("Team", 4483345998) -- Title, Image
  local CreditsTab2 = Window2:CreateTab("Credits", 4503342956) -- Title, Image
 
 
 
- local Toggle = MainTab:CreateToggle({
-    Name = "Break Server",
-    CurrentValue = false,
-    Flag = "BreakServer", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-        _G.breakServer = Value
-        breakserver()
-    end,
- })
+ local Button = MainTab:CreateButton({
+   Name = "Break Server",
+   Callback = function()
+      breakserver()
+   end,
+})
 
  local Toggle = MainTab:CreateToggle({
    Name = "Chat Spam",
